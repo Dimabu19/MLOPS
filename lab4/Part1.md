@@ -21,10 +21,10 @@
 1.  Open the sms-service folder in a terminal. Create a virtual environment and install dependencies.
 
 ```bash
-python -m venv .venv
+python3 -m venv .venv
 # macOS / Linux: source .venv/bin/activate
 # Windows PowerShell: .venv\Scripts\Activate.ps1
-python -m pip install -r requirements.txt
+python3 -m pip install -r requirements.txt
 ```
 
 2.  Create main.py with a health endpoint. (We will add prediction logic in Lab 2.)
@@ -42,7 +42,7 @@ def health():
 3.  Start the local web server, and leave the terminal open.
 
 ```bash
-python -m uvicorn main:app --reload
+python3 -m uvicorn main:app --reload
 ```
 
 4.  Open http://127.0.0.1:8000/health and then http://127.0.0.1:8000/docs.
