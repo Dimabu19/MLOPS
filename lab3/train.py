@@ -1,6 +1,6 @@
 """Session 4 SMS workflow: load/check -> split -> train -> evaluate -> save.
 
-Run with: python train.py --version v1
+Run with: python3 train.py --version v1
 Only training data fits the scikit-learn Pipeline. Validation is for model review.
 The held-out test data is NEVER used to choose a candidate in this lab.
 """
