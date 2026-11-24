@@ -8,7 +8,7 @@
 
 - Python matching Session 4, a terminal or VS Code; Docker Desktop / Docker Engine for Part 4.
 - A trusted fitted whole Pipeline (TF-IDF + MultinomialNB) from Session 4, saved as model.joblib. No retraining.
-- Copy the provided [requirements.txt](requirements.txt) from this lab into sms-service/. It includes the current Lab 3 ML pins plus fastapi==0.128.2 and uvicorn==0.48.0. If your model was trained with different ML package versions, replace the ML pins with those from its training environment; do not duplicate or upgrade them.
+- The exact compatible requirements.txt from the model-training environment. Add fastapi==0.128.2 and uvicorn==0.48.0 if absent; do not duplicate or upgrade the ML package pins.
 - Use only synthetic SMS examples; do not log or publish real messages.
 > Keep these files together in sms-service/: main.py, model.joblib, requirements.txt. Create Dockerfile during Lab 3.
 
@@ -18,13 +18,13 @@
 
 **Goal:** Start FastAPI and see an HTTP response in your browser.
 
-1.  Open the sms-service folder in a terminal. Confirm the copied requirements.txt is in this folder, then create a virtual environment and install dependencies.
+1.  Open the sms-service folder in a terminal. Create a virtual environment and install dependencies.
 
 ```bash
-python3 -m venv .venv
+python -m venv .venv
 # macOS / Linux: source .venv/bin/activate
 # Windows PowerShell: .venv\Scripts\Activate.ps1
-python3 -m pip install -r requirements.txt
+python -m pip install -r requirements.txt
 ```
 
 2.  Create main.py with a health endpoint. (We will add prediction logic in Lab 2.)
@@ -42,7 +42,7 @@ def health():
 3.  Start the local web server, and leave the terminal open.
 
 ```bash
-python3 -m uvicorn main:app --reload
+python -m uvicorn main:app --reload
 ```
 
 4.  Open http://127.0.0.1:8000/health and then http://127.0.0.1:8000/docs.

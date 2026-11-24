@@ -33,13 +33,7 @@ def predict(payload: SMSRequest):
     return {"label": label}
 ```
 
-2.  Save the file. With --reload, Uvicorn restarts automatically. To restart manually, stop the server with Ctrl+C and run:
-
-```bash
-python3 -m uvicorn main:app --reload
-```
-
-Look for startup errors in the terminal.
+2.  Save the file. With --reload, Uvicorn restarts automatically; otherwise stop and run it again. Look for startup errors in the terminal.
 
 3.  Open http://127.0.0.1:8000/docs. Select POST /predict → Try it out, enter the request below, and click Execute.
 
