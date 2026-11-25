@@ -32,15 +32,13 @@ Retain push checks and add pull-request checks using the same tests and Docker b
 
 Different valid implementations are welcome. One mission is enough. No retraining, publishing, deployment or new service is required.
 
-## Submit
+## Class discussion
 
-Keep your changes in your repository and add a short **`CHALLENGE_REPORT.md`** containing:
+**No submission or written report is required.** Be ready to briefly explain:
 
-- Chosen mission, the gap and a brief explanation of your change.
-- Detection/failing and passing evidence, with run links and commit identifiers where available.
-- Final pytest and CI/build results, plus anything still unverified.
-
-Be ready to explain your approach in the class discussion.
+- Which mission you chose and what you changed.
+- How your tests or workflow demonstrate the improvement.
+- Your final pytest and CI/build results, including anything still unverified.
 
 ## References and access fallback
 
